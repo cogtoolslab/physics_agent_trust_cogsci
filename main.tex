@@ -56,12 +56,37 @@
 
 \title{Trust in learning agents}
  
-\author{{\large \bf Erik Brockbank (ebrockbank@ucsd.edu)} \\
-  Department of Psychology, 9500 Gilman Drive \\
+\author{
+  {
+  % Erik
+  \large \bf Erik Brockbank* (ebrockbank@ucsd.edu)} \\
+  UCSD Department of Psychology, 9500 Gilman Drive \\
   La Jolla, CA 92093 USA
+  % Haoliang
+  \AND {\large \bf Haoliang Wang* (haw027@ucsd.edu)} \\
+  UCSD Department of Psychology, 9500 Gilman Drive \\
+  La Jolla, CA 92093 USA
+  % Justin
+  \AND {\large \bf Justin Yang (juy003@ucsd.edu)} \\
+  UCSD Department of Psychology, 9500 Gilman Drive \\
+  La Jolla, CA 92093 USA
+  % Suvir
+  \AND {\large \bf Suvir Mirchandani (suvir@cs.stanford.edu)} \\
+  Stanford Department of Computer Science, 353 Jane Stanford Way \\
+  Stanford, CA 94305 USA \\
+  % Erdem
+  \AND {\large \bf Erdem Biyik (ebiyik@stanford.edu)} \\
+  Stanford Department of Computer Science, 353 Jane Stanford Way \\
+  Stanford, CA 94305 USA \\
+  % Dorsa
+  \AND {\large \bf Dorsa Sadigh (dorsa@cs.stanford.edu)} \\
+  Stanford Department of Computer Science, 353 Jane Stanford Way \\
+  Stanford, CA 94305 USA \\
+  % Judy
   \AND {\large \bf Judith Fan (jefan@ucsd.edu)} \\
-  Department of Psychology, 9500 Gilman Drive \\
-  La Jolla, CA 92093 USA}
+  UCSD Department of Psychology, 9500 Gilman Drive \\
+  La Jolla, CA 92093 USA \\
+}
 
 
 \begin{document}
@@ -70,10 +95,10 @@
 
 
 \begin{abstract}
-ABSTRACT GOES HERE.
+How do people build up trust with humans and artificial agents? In the current work, we investigate this question, focusing on people's ability to evaluate the \textit{competence} of another agent across repeated interactions---a key component of interpersonal trust. Expanding on prior work which has largely focused on static evaluations of simple skills, we probe competence evaluations in a rich physical setting with agents that learn over time. Participants played a video game testing their intuitive physical reasoning alongside one of four artificial agents that suggested moves each round: a low competence agent, a high competence agent, a learning agent, and a worsening agent. We measure participants' decisions about when to intervene with their partner's suggestions to better understand how people determine another agent's competence from prior behavior. We find that people succeed with their bot partners in all cases but that decision making is not a matter of simply choosing the best option; people's intervention behavior reflects the competence of their partner in earlier rounds. These results provide a quantitative measure of how people integrate a partner's competence into their own decisions and contributes to our understanding of how to better facilitate coordination between humans and artificial agents.
 
 \textbf{Keywords:} 
-trust; social inference
+trust; social inference; artificial agents; competence; learning 
 \end{abstract}
 
 
@@ -99,7 +124,7 @@ See also \citeA{gweon2021inferential}.
 
 \subsection{Participants}
 
-Participants were 256 adults recruited from Prolific. XX participants were removed due to technical issues encountered during the experiment. This resulted in XX participants distributed roughly equally across the four conditions. The experiment lasted approximately 25 minutes and participants were paid \$14/hr based on this expected completion time. 
+Participants were 256 adults recruited from Prolific. 12 participants were removed due to technical issues encountered during the experiment, resulting in 244 participants with complete data. The experiment lasted approximately 25 minutes and participants were paid \$14/hr based on this expected completion time. 
 
 
 \subsection{Stimuli}
@@ -132,7 +157,7 @@ In each trial, we measured the bot's suggested paddle location, whether the part
 
 Participants were first shown a brief set of instructions outlining the task. They then completed 96 trials with their bot partner. Each trial began with the bot suggesting a paddle location that would catch the ball; the paddle was shown moving around the circle and a small animation on the right showed the bot ``thinking.'' Text in the middle of the circle read ``ROBOT'S TURN'' and during this time, participants' keyboard responses were disabled. Once the bot had moved the paddle to its suggested location, the animation concluded and the bot changed colors. Text in the center read ``YOUR TURN'' and participants were given the opportunity to either adjust the paddle's location with the arrow keys or simply keep the bot's suggested location. If participants adjusted the paddle location, the bot's original suggestion was indicated with a gray outline so that participants would be able to see how close the ball landed to the bot's original suggestion on each trial. When participants were happy with the paddle's location, they launched the ball using the spacebar (as soon as the ball was launched, they could no longer adjust the paddle location). The ball's launch trajectory was animated falling towards the paddle. If the ball made contact with any part of the paddle, this was considered a success. When participants successfully caught the ball, its location on the paddle was frozen and a message in the circle indicated that they had succeeded. If participants failed to catch the ball, it was shown falling out of the circle and a message in the center indicated that they had missed. Participants then pressed the spacebar to proceed to the next trial. 
 
-After completing all 96 trials, participants were given a post-experiment questionnaire containing two parts. First, a series of demographic questions prompted participants for their age, gender identity (optional), level of education, and two covariates which we did not analyze here: number of physics classes taken in their life and hours of video games played in their life. Next, they were asked several questions about their decisions during the experiment. On a slider scale ranging from 0-100\%, participants indicated how often they thought they had intervened on the previous trials and how often they would expect to intervene if they were to play another 96 rounds with this same bot partner. Finally, they were asked to indicate on a five-point Likert scale how much they trusted the bot agent to catch the ball and how they decided whether to intervene on a given trial (two additional questions asked how much effort they had put into the task and whether they had experienced technical difficulties). 
+After completing all 96 trials, participants were given a post-experiment questionnaire containing two parts. First, a series of demographic questions prompted participants for their age, gender identity (optional), level of education, and two covariates which we did not analyze here: number of physics classes taken in their life and hours of video games played in their life. Next, they were asked several questions about their decisions during the experiment. On a slider scale ranging from 0-100\%, participants indicated how often they thought they had intervened on the previous trials and how often they would expect to intervene if they were to play another 96 rounds with this same bot partner. Finally, they were asked to indicate on a five point Likert scale how much they trusted the bot agent to catch the ball and how they decided whether to intervene on a given trial (two additional questions asked how much effort they had put into the task and whether they had experienced technical difficulties). 
 
 
 
@@ -155,8 +180,8 @@ We first ask whether there were any differences in people's overall ability to p
 \end{figure}
 
 
-The high accuracy level that participants eventually obtained with all four bot partners suggests that their intervention responses were calibrated to the bot's underlying competence. In other words, accurate and low-error responding would have looked very different across the four conditions. With the \textit{high competence} bot partner, participants could achieve high rates of success through minimal intervention, while success in the \textit{low competence} condition necessitated greater and more frequent intervention. Perhaps most interestingly, success with the \textit{learning} and \textit{worsening} agents would have required that participants be sensitive to the changing accuracy of their partner's suggestions. The graph at right in Figure \ref{fig:results_summary} shows average intervention distance (i.e., the average distance in radians between participants' final paddle placement and their bot partner's initial suggestion) in each trial block across the four conditions. Consistent with the hypothesis above, intervention distances were highly calibrated to the bot partner's ability across the four conditions, with large intervention distances in the \textit{low competence} condition, small intervention distances in the \textit{high competence} condition, and intervention distances that roughly tracked the accuracy changes of the \textit{learning} and \textit{worsening} agents. This latter result suggests that people did not regard their bot partner's ability as \textit{static}, instead calibrating their responses to improvement and decline in the bot's accuracy. Thus, the results in Figure \ref{fig:results_summary} indicate that participants succeeded in collaborating with their bot partner on the task and did so by calibrating their interventions to their partner's underlying accuracy.
-
+The high accuracy level that participants eventually obtained with all four bot partners suggests that their intervention responses were calibrated to the bot's underlying competence. With the \textit{high competence} bot partner, participants could achieve high rates of success through minimal intervention, while success in the \textit{low competence} condition necessitated greater and more frequent intervention. Perhaps most interestingly, success with the \textit{learning} and \textit{worsening} agents would have required that participants be sensitive to the changing accuracy of their partner's suggestions. The graphs at right in Figure \ref{fig:results_summary} shows average intervention rate (proportion of trials in which people intervened) and average intervention distance (i.e., the average distance in radians between participants' final paddle placement and their bot partner's initial suggestion) in each trial block across the four conditions. Consistent with the hypothesis above, intervention rates and distances were highly calibrated to the bot partner's ability across the four conditions, with higher intervention rates and large intervention distances in the \textit{low competence} condition, lower intervention rates and small intervention distances in the \textit{high competence} condition, and intervention rates and distances that roughly tracked the accuracy changes of the \textit{learning} and \textit{worsening} agents. This latter result suggests that people did not regard their bot partner's ability as \textit{static}, instead calibrating their responses to improvement and decline in the bot's accuracy. Thus, the results in Figure \ref{fig:results_summary} indicate that participants succeeded in collaborating with their bot partner on the task and did so by calibrating their interventions to their partner's underlying accuracy.
+ 
 
 \subsection{People trusted bot partners}
 
@@ -172,12 +197,21 @@ To test these two hypotheses, we compare intervention behavior on the eight \tex
 \begin{center}
 \includegraphics[width=\linewidth]{img/results-critical_trials.png}
 \end{center}
-\caption{Intervention behavior on \textit{critical trials}. Left: average proportion of critical trials on which participants chose to intervene. Right: average distance participants intervened on critical trials. The dashed line indicates the optimal intervention distance on these trials. Even though the bot partner's suggested paddle location was the same distance from the ball's landing point on all critical trials, participant responses were sensitive to their partner's competence, intervening less when their partner was initially accurate.} 
+\caption{Intervention behavior on \textit{critical trials}. Left: average proportion of critical trials on which participants chose to intervene. Right: average distance participants intervened on critical trials in which they chose to intervene. The dashed line indicates the optimal intervention distance on these trials. Even though the bot partner's suggested paddle location was the same distance from the ball's landing point on all critical trials, participant responses were sensitive to their partner's competence, intervening less when their partner was initially accurate.} 
 \label{fig:critical_trials}
 \end{figure}
 
 
-\subsection{OPTIONAL: post-survey results}
+\subsection{People extrapolate future performance for intervention decisions}
+
+% FIGURE: post-survey
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=\linewidth]{img/results-survey.png}
+\end{center}
+\caption{Results of post-experiment questionnaire suggest that people form expectations of their bot partner's future performance based on attributions of the bot's competence. Top: participant estimates of how much they intervened with each bot partner compared to how much they would expect to intervene in future rounds with the same partner. Bottom: average responses on a five point Likert scale asking participants how much they trust their partner to catch the ball on any given round.} 
+\label{fig:survey}
+\end{figure}
 
 
 
